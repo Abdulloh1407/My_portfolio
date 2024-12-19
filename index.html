@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <a href=""><img src="./aseect/img/Logo.png" alt="">
+            </a>
+              <ul>
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li>
+                    <a href="#">Skills</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Contact Me</a>
+                </li>
+              </ul>
+            <button class="burger-button">Resume
+            </button>
+                <div class="nav">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="check-btn">
+                        <i data-lucide="menu"></i>
+                    </label>
+                    <label class="modal" for="check" id="check">
+                        <a href="#">
+                            About
+                        </a>
+                        <a href="#">Projects</a>
+                        <a href="#">Contact</a>
+                    </label>
+                </div>
+        </header>
+        <section class="about">
+            <figure>
+                <img src="./aseect/svg/Banner.svg" alt="">
+            </figure>
+          <div>
+            <div class="about-text">
+                <h1>Hello I’am <span>Evren Shah.</span></h1>
+                <h1>Frontend <span class="stroke">Developer</span></h1>
+                <h1>Based In <span>India.</span></h1>
+            </div>
+            <p>I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to
+                specimen book.</p>
+            <div class="about_btn">
+                <button><img src="aseect/svg/facebbok.svg" alt=""></button>
+                <button><img src="aseect/svg/fgs.svg" alt=""></button>
+                <button><img src="aseect/svg/twiter.svg" alt=""></button>
+                <button><img src="aseect/svg/dogs.svg" alt=""></button>
+            </div>
+          </div>
+        </section>
+    </div>
+</body>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+</html>
