@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Sora";
-    src: url("./assets/fonts/Sora-Regular.ttf");
+    src: url("./aseect/font/Sora-Regular.ttf");
 }
 
 @font-face {
     font-family: "Sora-bold";
-    src: url("./assets/fonts/Sora-Bold.ttf");
+    src: url("./aseect/font/Sora-Bold.ttf");
 }
 
 
@@ -19,7 +19,9 @@
 body {
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-family: Sora;
 }
 
 #root {
@@ -30,34 +32,28 @@ body {
 }
 
 .black-style {
-    line-height: 56px;
-
-    h1 {
-        font-size: 48px;
-    }
+    font-size: 48px;
+    font-weight: 400;
 
     span {
-        font-size: 48px;
-        color: #000;
+        font-family: Sora-bold;
     }
 }
 
 .white-style {
-    line-height: 56px;
-
-    h1 {
-        font-size: 48px;
-    }
+    font-size: 48px;
+    font-weight: 400;
+    color: #fff;
 
     span {
-        font-size: 48px;
-        color: #fff;
+        font-family: Sora-bold;
     }
 }
 
-/* header{
-    padding: 80px 24px;
-} */
+section {
+    padding: 40px 16px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -100,6 +96,8 @@ header {
                 color: #fff;
                 font-size: 25px;
                 padding: 18px 30px;
+                border: 0.5px solid #fff;
+                border-radius: 10px;
 
                 &:hover {
                     background-color: #fff;
@@ -125,7 +123,6 @@ section.about {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    padding: 40px 16px;
 
     figure {
         width: 100%;
@@ -170,38 +167,318 @@ section.about {
             display: flex;
             gap: 24px;
             align-items: center;
+            transition: all 0.5s ease;
 
             a {
                 padding: 14px;
                 border: 1px solid #000000;
                 border-radius: 4px;
                 background-color: transparent;
-                transition: all 0.3s ease;
-             
-                    &:hover {
-                        background: #ddd;
-                        fill: #fff;
-                        img{
-                            fill: #fff;
-                            stroke: #fff;
-                        }
+                transition: all 0.5s ease;
 
-                    }
+            }
+
+            a:hover {
+                background: #000;
+                fill: #fff;
+
+                path {
+                    fill: #fff;
+
                 }
-        }
-    }   
 
+            }
+        }
+    }
+}
+
+section.about.me {
+    flex-direction: column;
+    align-items: center;
+}
+
+section.about_skils {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .skils-wrapper {
+        width: 100%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+        .skils-card {
+            border: 1px solid #ccc;
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-radius: 4px;
+            font-size: 20px;
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+
+                .stroke_card {
+                    fill: #fff;
+                }
+
+                .fill_card {
+                    fill: #fff;
+                }
+
+                .fill_card1 {
+                    fill: #000;
+                }
+            }
+
+        }
+
+
+    }
 
 }
+
+section.experience {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .experience_cart {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 32px 24px;
+
+        &>div {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 30px;
+
+            .text {
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+        p {
+            color: gray;
+        }
+
+        &:hover {
+            background: #27272A;
+        }
+    }
+}
+
+section.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    background-color: #000;
+
+    .project-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            figure {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+
+                h2 {
+                    font-size: 24px;
+                    font-family: Sora-Regullar;
+                    color: #fff;
+                }
+
+                h3 {
+                    font-size: 24px;
+                    font-family: Sora-Regullar;
+                    color: #fff;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-family: Sora-Regullar;
+                    color: #71717A;
+                }
+            }
+        }
+    }
+}
+section.my_team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .teamplate{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+        .template_card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            padding: 20px;
+            border-radius: 20px;
+            color: #404040;
+            border: 1px solid;
+            transition: all 0.5s ease;
+            p{
+                text-align: center;
+                font-size: 16px;
+            }
+            span{
+                width: 45%;
+                height: 2px;
+                background-color: #000;
+            }
+            h4{
+                font-size: 20px;
+                color: #404040;
+            }
+             
+             h6{
+                font-size: 16px;
+                color: #71717A;
+             }
+             &:hover{
+                background-color: #000;
+                color: #fff;
+                span{
+                    background-color: #fff;
+                }
+
+                h4 ,h6{
+                    color: #fff;
+                }
+             }
+        }
+    }
+}
+section.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:16px 40px;
+    .footer_register{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .footer-form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            input{
+                text-align: start;
+                padding: 10px 50px;
+                border-radius: 4px;
+                border: 1px solid #000;
+                outline: none;
+            }
+            .name{
+                border-radius: 4px;
+                border: none;
+                outline: none;
+                border: 1px solid;
+                
+            }
+            button{
+                font-size: 16px;
+                color: #fff;background-color: #000;
+                border-radius: 10px;
+                padding: 16px 30px;
+             }
+            .about_btn {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+                transition: all 0.5s ease;
+
+                a {
+                padding: 14px;
+                border: 1px solid #000000;
+                border-radius: 4px;
+                background-color: transparent;
+                transition: all 0.5s ease;
+
+            }
+
+             a:hover {
+                background: #000;
+                fill: #fff;
+
+                path {
+                    fill: #fff;
+
+                }
+
+            }}
+
+    }
+}
+}
+
+
+
 
 
 @media (min-width: 600px) {
     section.about {
-        flex-direction: row-reverse;
+        flex-direction: row;
 
         figure {
             width: 100%;
             height: 100%;
+        }
+    }
+    section.my_team{
+        .teamplate{
+            flex-direction: row;
         }
     }
 }
@@ -233,6 +510,7 @@ section.about {
 
     section.about {
         flex-direction: row-reverse;
+        align-items: end;
         gap: 20px;
 
         figure {
@@ -243,23 +521,91 @@ section.about {
             width: 50%;
 
             .about-text {
-                font-size: 90px;
+                h1 {
+                    font-size: 60px;
+                }
             }
 
         }
     }
-}
+
+    section.about_skils {
+        .skils-wrapper {
+            gap: 70px;
+        }
+    }
+
+    section.experience {
+        .experience_cart {
+            &>div {
+                flex-direction: row;
+            }
+
+        }
+    }
+
+    section.about {
+        section.me {
+            background-color: red;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        padding: 60px 112px;
+    }
+
+    section.about.me {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    section.project {
+          .project-card-wrapper {
+
+            :nth-of-type(odd) {
+                flex-direction: row;
+                justify-content: center;
+                
+            }
+
+            :nth-of-type(even) {
+                flex-direction: row-reverse;
+            }
+
+            .project-card {
+                gap: 60px;
+               &>div{ 
+                gap: 40px;
+                h2{
+                    font-size: 48px;
+                    font-family: Sora;
+                }
+                h3{
+                    font-size: 32px;
+                }
+                }
+            }
+           }
+        }
+    }
+
 
 @media (min-width: 1000px) {
     header {
-        padding: 8px 20px;
+        padding: 32px 112px;
 
         ul {
             gap: 52px;
         }
     }
 
-    section.about {
+    section {
+        padding: 60px 80px;
+    }
+
+    section.experience_me {
         align-items: end;
         gap: 20px;
 
@@ -293,4 +639,5 @@ section.about {
             }
         }
     }
+
 }
