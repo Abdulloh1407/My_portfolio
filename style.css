@@ -23,6 +23,9 @@ body {
     align-items: center;
     font-family: Sora;
 }
+body:has(.nav>input:checked){
+    overflow: hidden;
+}
 
 #root {
     max-width: 1440px;
@@ -58,6 +61,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
 
     ul {
         display: none;
@@ -89,7 +95,7 @@ header {
             flex-direction: column;
             align-items: center;
             gap: 40px;
-            background-color: #000000;
+            background-color: #32313175;
             transition: all 0.3s ease;
 
             a {
@@ -488,6 +494,25 @@ section.footer{
     }
 }
 
+section.main{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0px;
+    &>div{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-family: Sora;
+        font-weight: none;
+        font-size: 12px;
+        h4{
+            font-family: Sora;
+        }
+    }
+}
 
 
 
@@ -630,10 +655,18 @@ section.footer{
                 width: 100%;
         }
     }
-}   
+ }   
     .footer-text{
         gap: 50px;
     }
+    
+}
+section.main{
+ padding: 24px 80px;
+&>div{
+ flex-direction: row;
+ gap: 20px;
+}
 }
 
 
